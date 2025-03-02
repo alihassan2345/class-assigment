@@ -99,18 +99,49 @@ else {
 }
 
 // Question 16
+let date2 = new Date();
+let ms = date2.getTime();
+let min = ms / (1000 * 60);
+document.write(`Current date: ${date2} <br>`);
+document.write(`Elapsed milliseconds since January 1, 1970: ${ms} <br>`);
+document.write(`Elapsed minutes since January 1, 1970: ${min} <br>`);
 
+// Question 17
+let date3 = new Date();
+let hours = date3.getHours();
+if (hours < 12) {
+  document.write(`It am`);
+}
+else {
+    document.write(`It pm`);
+}
 
+// Question 23
+let age = prompt("Enter your age:");
+let currentYear = new Date().getFullYear();
+let birthYear = currentYear - age;
+document.write("Your age is: " + age + "<br>");
+document.write("Your birth year is: " + birthYear);
 
+// Question 24
+let month12 = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+let date4 = new Date();
+let currentMonth = date4.getMonth();
+let customerName = prompt("Enter your name: ");
+let numberOfUnits = +prompt("Enter number of units: ");
+let chargesPerUnit = +prompt("Enter charges per unit: ");
+let latePaymentSurcharge = +prompt("Enter late payment surcharge: ");
+let netAmount = numberOfUnits * chargesPerUnit;
+let grossAmount = netAmount + latePaymentSurcharge;
 
-
-
-
-
-
-
-
-
+document.write("<h1>K-Electric Bill</h1>");
+document.write("Customer Name: <b>" + customerName + "</b><br>");
+document.write("Month: <b>" + month12[currentMonth] + "</b><br>");
+document.write("Number of units: <b>" + numberOfUnits + "</b><br>");
+document.write("Charges per unit: <b>" + chargesPerUnit + "</b><br><br>");
+document.write("Net Amount Payable (within Due Date): <b>" + netAmount + "</b><br>");
+document.write("Late Payment Surcharge: <b>" + latePaymentSurcharge + "</b><br>");
+document.write("Gross Amount Payable (after Due Date): <b>" + grossAmount + "</b><br>");
 
 
 
