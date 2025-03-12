@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <button onclick="let result = calculate(+prompt( 'enter your first number'),+prompt( 'enter your second number') , prompt('enter operator (you can choose only +, -, *, /)'));
+    document.write('result :' + result );">Calulate</button>
+
+
+<button onmouseover="hoverMessage()">Hover Over Me</button>
+
+<script>
+    function hoverMessage() {
+        alert("Mouse is over the button!");
+    }
+</script> 
+ <button  onmouseout="changeText('Hover Over Me')" onmouseover="changeText('Mouse Over!')">Hover Over Me</button>
+
+<script>
+    function changeText(message) {
+        document.querySelector("button").innerText = message;
+        
+    }
+</script>
+
+
+ <button onmousedown="mouseDownMessage()">Press Me</button>
+
+<script>
+    function mouseDownMessage() {
+        alert("Mouse button pressed down!");
+    }
+</script> 
+
+ <button onmouseup="mouseUpMessage()">Release Me</button>
+
+<script>
+    function mouseUpMessage() {
+        alert("Mouse button released!");
+    }
+</script> 
+
+<div onmousemove="trackMouse(event)" style="width: 500px; height: 200px; background-color: lightblue;">
+    Move mouse here
+</div>
+<p id="coords"></p>
+
+<script>
+    function trackMouse(event) {
+        document.getElementById("coords").innerText = "X: " + event.clientX + ", Y: " + event.clientY;
+    }
+</script> 
+
+<button onmouseover="showTooltip(this)" onmouseout="hideTooltip()">Hover for Details</button>
+<p id="tooltip" style="display:none;">This is a premium product.</p>
+
+<script>
+    function showTooltip(element) {
+        document.getElementById("tooltip").style.display = "block";
+    }
+    function hideTooltip() {
+        document.getElementById("tooltip").style.display = "none";
+    }
+</script> 
+
+
+ <input type="text" onkeydown="showKey(event)" placeholder="Type something..." />
+
+<script>
+  function showKey(event) {
+    console.log("You pressed: " + event.key);
+  }
+</script>
+
+
+
+
+    <script src='app.js'></script>
+</body>
+</html>
