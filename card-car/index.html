@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #e0eafc, #cfdef3); /* New gradient background */
+            color: #333;
+        }
+    
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 2.8rem;
+            color: #1a1a1a;
+            text-shadow: 1px 1px 2px #ccc;
+        }
+    
+        .form-container, .form-container input, .form-container button {
+            transition: all 0.3s ease-in-out;
+        }
+    
+        .form-container input {
+            width: 48%;
+            padding: 10px;
+            margin: 10px 1%;
+            border: 1px solid #aaa;
+            border-radius: 10px;
+            font-size: 1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fdfdfd;
+        }
+    
+        .form-container button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            border: none;
+            background: linear-gradient(to right, #00b4db, #0083b0);
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    
+        .form-container button:hover {
+            transform: scale(1.05);
+            background: linear-gradient(to right, #0083b0, #00b4db);
+        }
+    
+        #addedcar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 30px;
+        }
+    
+        .card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            width: 320px;
+            margin: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .card:hover {
+            transform: scale(1.03);
+        }
+    
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    
+        .card-body {
+            padding: 15px;
+        }
+    
+        .card-title {
+            font-size: 1.5rem;
+            color: #2c3e50;
+        }
+    
+        .card-text {
+            margin: 5px 0;
+            font-size: 1rem;
+            color: #444;
+        }
+    
+        .buttonadd {
+            background: linear-gradient(to right, #ff6a00, #ee0979);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+    
+        .buttonadd:hover {
+            background: linear-gradient(to right, #ee0979, #ff6a00);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Display Car Card</h1>
+    <div style="text-align: center; margin: 20px; padding: 10px;" >
+        <input style="width: 200px; height: 40px; text-align: center; margin: 10px; border-radius: 10px; border-color: #2980b9 ; color: red; font-size: 20px; " type="text" name="" id="carName" placeholder="Car Name">
+        <input style="width: 200px; height: 40px; text-align: center; margin: 10px; border-radius: 10px; border-color: #2980b9 ; color: red; font-size: 20px; " type="text" name="" id="carModel" placeholder="Car Model">
+        <br>
+        <input style="width: 200px; height: 40px; text-align: center; margin: 10px; border-radius: 10px; border-color: #2980b9 ; color: red; font-size: 20px; " type="text" name="" id="carYear" placeholder="Car Year">
+        <input style="width: 200px; height: 40px; text-align: center; margin: 10px; border-radius: 10px; border-color: #2980b9 ; color: red; font-size: 20px; " type="text" name="" id="carColor" placeholder="Car Color">
+        <br>
+        <input style="width: 200px; height: 40px; text-align: center; margin: 10px; border-radius: 10px; border-color: #2980b9 ; color: red; font-size: 20px; " type="text" name="" id="carPrice" placeholder="Car Price">
+        <input style="width: 200px; height: 40px; text-align: center; margin: 10px; border-radius: 10px; border-color: #2980b9 ; color: red; font-size: 20px; " type="text" name="" id="carImage" placeholder="Car Image URL">
+        <br>
+        <button onclick="addbut()" class="buttonadd" style="width: 100px; height: 40px; margin-top: 20px; border-radius: 20px;">Add Car</button>
+        
+
+    </div>
+
+        <div id="addedcar">
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+<script src="app.js"></script>
+
+</body>
+</html>
